@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import DisplaySearch from './components/DisplaySearch/DisplaySearch'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -9,6 +8,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Main from './components/Main/Main';
+import Coctail from './components/Coctail/Coctail';
 
 const router = createBrowserRouter([
   {
@@ -16,13 +16,10 @@ const router = createBrowserRouter([
     element: <Main/>,
   },
   {
-    path: "/displaysearch",
-    element: <DisplaySearch/>
-  }
+    path: "coctail/:coctailId",
+    element: <Coctail/>,
+  },
 ]);
-
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
