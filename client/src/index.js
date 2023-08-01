@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import DisplaySearch from './components/DisplaySearch/DisplaySearch'
-
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,

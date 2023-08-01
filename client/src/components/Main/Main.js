@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 export default function Main() {
   const [coctailName, setCoctailName] = useState('');
 
@@ -25,7 +24,7 @@ export default function Main() {
     }
   }, [coctailName]);
 
-  
+
 
   const routeChange = () => {
     navigate('/displaysearch');
@@ -35,20 +34,19 @@ export default function Main() {
     setCoctailName(event.target.value);
   };
 
-    return (
-      <>
-        <header></header>
-          <form>
-            <label> 
-            Find your drink
-            <input type="text" value={coctailName}> onChange={handleInputChange}</input>
-            </label>
-            <button id="searchCoctails" onClick={routeChange}>Search</button>
-          </form>
-        <footer></footer>
-      
-        
-      </>
-    );
-  }
-  
+  return (
+    <>
+      <header></header>
+      <form>
+        <label>
+          Find your drink
+          <input type="text" value={coctailName} onChange={handleInputChange} />
+        </label>
+        <button id="searchCoctails" onClick={routeChange}>Search</button>
+      </form>
+      <footer></footer>
+
+
+    </>
+  );
+}
