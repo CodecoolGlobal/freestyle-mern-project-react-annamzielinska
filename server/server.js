@@ -19,10 +19,6 @@ app.get('/', (req, res) => {
   res.redirect('/mainpage');
 });
 
-app.get('/mainpage', (req, res) => {
-  res.send('MainPage');
-});
-
 app.get('/register', (req, res) => {
   res.send('Register');
 });
