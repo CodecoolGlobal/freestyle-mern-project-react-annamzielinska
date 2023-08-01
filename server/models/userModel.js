@@ -8,6 +8,6 @@ const UserSchema = new Schema({
     city: String,
     email: String,
     password: String,
-});
+}, {timestamps: true});
 
 export default model('User', UserSchema);
