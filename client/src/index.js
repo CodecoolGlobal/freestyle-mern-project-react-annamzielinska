@@ -9,12 +9,22 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Main from './components/Main/Main';
-
+import Signup from './components/Registration/Signup';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './components/Registration/Login';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main/>,
   },
+  {
+    path: "/Signup",
+    element: <Signup/>,
+  },
+  {
+    path: "/Login",
+    element: <Login/>,
+  }
 ]);
 
 
