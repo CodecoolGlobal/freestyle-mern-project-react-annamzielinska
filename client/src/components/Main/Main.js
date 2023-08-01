@@ -1,11 +1,16 @@
 import React from 'react';
-
+import Search from '../search/Search';
 
 export default function Main() {
-    return (
-      <div className="App">
-        HELLO WORLD MAIN KUPA
-      </div>
-    );
-  }
-  
+  return (
+    <>
+      <header>
+        <Search />
+      </header>
+      <section>
+        codecool
+      </section>
+      <footer></footer>
+    </>
+  );
+}
