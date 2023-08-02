@@ -12,7 +12,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:8000/users`, {
+        fetch(`http://localhost:8000/users/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ function Signup() {
                         Register
                     </button>
                 </form>
-                <p>Already Have an Account</p>
+                <p>Already Have an Account?</p>
                 <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
                     Login
                 </Link>

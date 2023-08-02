@@ -1,21 +1,20 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:8000`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ password, username }),
+        const user = { username, password }
+        // todo fetch above data to backend
+        fetch("http://localhost:8000/users/login", {
+            method: "POST", body: JSON.stringify(user),
+        }).then(res => {
+            console.log(res.status)
         })
-            .then(response => response.json())
-            .then(result => console.log(result))
-            .catch(err => console.log(err));
     };
 
     return (
@@ -53,6 +52,10 @@ function Login() {
                         Login
                     </button>
                 </form>
+                <p>Dont have an Account?</p>
+                <Link to="/signup" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+                    Register
+                </Link>
             </div>
         </div>
     );
