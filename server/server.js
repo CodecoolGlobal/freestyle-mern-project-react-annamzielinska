@@ -35,6 +35,13 @@ app.use('/drinks', router)
   
 export default app  
 
+
+
+
+
+
+
+// PONIŻEJ SPRAWY KTÓRE MOGĄ SIĘ PRZYDAĆ.
 // (async () => {
 //   try {
 //     await mongoose.connect(MONGO_URL, {});
