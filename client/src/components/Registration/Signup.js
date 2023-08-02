@@ -12,7 +12,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:8000`, {
+        fetch(`http://localhost:8000/drinks/users`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -104,42 +104,6 @@ function Signup() {
                             name="password"
                             className="form-control rounded-0"
                             onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="email">
-                                <strong>Username</strong>
-                            </label>
-                            <input
-                            type="text"
-                            placeholder="Enter Username"
-                            name="username"
-                            className="form-control rounded-0"
-                            onChange={(e) => setUsername(e.target.value)}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="email">
-                                <strong>City</strong>
-                            </label>
-                            <input
-                            type="text"
-                            placeholder="Enter City"
-                            name="city"
-                            className="form-control rounded-0"
-                            onChange={(e) => setCity(e.target.value)}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="email">
-                                <strong>Surname</strong>
-                            </label>
-                            <input
-                            type="text"
-                            placeholder="Enter Surname"
-                            name="surname"
-                            className="form-control rounded-0"
-                            onChange={(e) => setSurname(e.target.value)}
                             />
                         </div>
                         <button type="submit" className="btn btn-success w-100 rounded-0">
