@@ -4,8 +4,15 @@ import { Link } from "react-router-dom";
 
 function Signup() {
     const [name, setName] = useState()
+    const [surname, setSurname] = useState()
+    const [username, setUsername] = useState()
+    const [city, setCity] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
+    
+    
+    
+   
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,7 +21,7 @@ function Signup() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, password }),
+            body: JSON.stringify({ name, surname, username, city, email, password }),
         })
         .then(response => response.json())
         .then(result => console.log(result))
@@ -37,6 +44,45 @@ function Signup() {
                             name="email"
                             className="form-control rounded-0"
                             onChange={(e) => setName(e.target.value)}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email">
+                            <strong>Surname</strong>
+                            </label>
+                            <input
+                            type="email"
+                            placeholder="Enter Surname"
+                            autoComplete="off"
+                            name="email"
+                            className="form-control rounded-0"
+                            onChange={(e) => setSurname(e.target.value)}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email">
+                            <strong>Username</strong>
+                            </label>
+                            <input
+                            type="email"
+                            placeholder="Enter Username"
+                            autoComplete="off"
+                            name="email"
+                            className="form-control rounded-0"
+                            onChange={(e) => setUsername(e.target.value)}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email">
+                            <strong>City</strong>
+                            </label>
+                            <input
+                            type="email"
+                            placeholder="Enter City"
+                            autoComplete="off"
+                            name="email"
+                            className="form-control rounded-0"
+                            onChange={(e) => setCity(e.target.value)}
                             />
                         </div>
                         <div className="mb-3">
