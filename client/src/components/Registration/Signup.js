@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 
 
 function Signup() {
-    const [name, setName] = useState()
-    const [surname, setSurname] = useState()
-    const [username, setUsername] = useState()
-    const [city, setCity] = useState()
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
-    
-    
-    
-   
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [surname, setSurname] = useState('')
+    const [username, setUsername] = useState('')
+    const [city, setCity] = useState('')
+    const [password, setPassword] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,7 +17,7 @@ function Signup() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, surname, username, city, email, password }),
+            body: JSON.stringify({ name, email, password, surname, city, username }),
         })
         .then(response => response.json())
         .then(result => console.log(result))
@@ -108,6 +104,42 @@ function Signup() {
                             name="password"
                             className="form-control rounded-0"
                             onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email">
+                                <strong>Username</strong>
+                            </label>
+                            <input
+                            type="text"
+                            placeholder="Enter Username"
+                            name="username"
+                            className="form-control rounded-0"
+                            onChange={(e) => setUsername(e.target.value)}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email">
+                                <strong>City</strong>
+                            </label>
+                            <input
+                            type="text"
+                            placeholder="Enter City"
+                            name="city"
+                            className="form-control rounded-0"
+                            onChange={(e) => setCity(e.target.value)}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email">
+                                <strong>Surname</strong>
+                            </label>
+                            <input
+                            type="text"
+                            placeholder="Enter Surname"
+                            name="surname"
+                            className="form-control rounded-0"
+                            onChange={(e) => setSurname(e.target.value)}
                             />
                         </div>
                         <button type="submit" className="btn btn-success w-100 rounded-0">
