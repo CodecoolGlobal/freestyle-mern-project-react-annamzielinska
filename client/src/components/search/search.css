@@ -1,7 +1,14 @@
 .hidden {
     display: none;
-  }
-  
-  .whiteBackground {
+}
+
+.whiteBackground {
     background-color: #fff;
-  }
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    max-width: 100%;
+    max-height: 20px;
+}
