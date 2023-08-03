@@ -25,6 +25,10 @@ function Search() {
 
   const fetchDataByName = async (name) => {
     setSelectedIngredient(null);
+    if (!name) {
+      setCoctails({ drinks: [] });
+      return;
+    }
     try {
       const response = await fetch(
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
@@ -67,16 +71,16 @@ function Search() {
             ))}
           </select>
         </label>
-        <ul className={selectedIngredient ? "hidden" : coctails.hasOwnProperty("drinks") && coctails.drinks != null && coctails.drinks.length > 0 ? "whiteBackground" : "hidden"}>
-          {coctails.hasOwnProperty("drinks") && coctails.drinks != null &&
+        <ul className={(coctails.drinks && coctails.drinks.length > 0) || selectedIngredient ? "whiteBackground" : "hidden"}>
+          {coctails.drinks &&
             coctails.drinks.map((coctail) => (
               <a href={`/coctail/${coctail.idDrink}`} key={coctail.idDrink}>
-                <li style={{}}>{coctail.strDrink}</li>
+                <li>{coctail.strDrink}</li>
               </a>
             ))}
         </ul>
-        <ul className={selectedIngredient ? coctails.hasOwnProperty("drinks") && coctails.drinks != null && coctails.drinks.length > 0 ? "whiteBackground" : null : "hidden"}>
-          {ingredient.hasOwnProperty("drinks") && ingredient.drinks != null &&
+        <ul className={selectedIngredient ? "whiteBackground" : "hidden"}>
+          {ingredient.drinks &&
             ingredient.drinks.map((ingridients) => (
               <a href={`/coctail/${ingridients.idDrink}`} key={ingridients.idDrink}>
                 <li>{ingridients.strDrink}</li>

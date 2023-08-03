@@ -2,8 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import router from './routes/login.js'
-import userModel from './models/userModel.js';
+import UserRouter from './routes/login.js'
 const { MONGO_URL, PORT } = process.env;
 
 const corsPolicy = {
@@ -31,33 +30,33 @@ mongoose.connect(MONGO_URL)
     app.close();
    })
 
-app.use('/users', router)
+app.use('/users', UserRouter)
 
 
-app.get("/users/register", async (req, res) => {
-  try {
-      const data = await userModel.find();
-      res.status(200).json(data);
-  } catch (error) {
-      console.error('Error retrieving data:', error);
-      res.status(500).json({ error: 'An error occurred while retrieving data.' });
-  }
-}); 
+// app.get("/users/register", async (req, res) => {
+//   try {
+//       const data = await userModel.find();
+//       res.status(200).json(data);
+//   } catch (error) {
+//       console.error('Error retrieving data:', error);
+//       res.status(500).json({ error: 'An error occurred while retrieving data.' });
+//   }
+// }); 
 
-app.post("/users/login", async (req, res) => {
-  try {
-      const username = req.body.username
-      const data = await userModel.find({username: username});
-      if (!data) {
-        return res.status(404)
-      } 
-      if (data.password !== req.body.password) return res.status(402)
-      res.status(200).json(data);
-  } catch (error) {
-      console.error('Error retrieving data:', error);
-      res.status(500).json({ error: 'An error occurred while retrieving data.' });
-  }
-}); 
+// app.post("/users/login", async (req, res) => {
+//   try {
+//       const username = req.body.username
+//       const data = await userModel.find({username: username});
+//       if (!data) {
+//         return res.status(404)
+//       } 
+//       if (data.password !== req.body.password) return res.status(402)
+//       res.status(200).json(data);
+//   } catch (error) {
+//       console.error('Error retrieving data:', error);
+//       res.status(500).json({ error: 'An error occurred while retrieving data.' });
+//   }
+// }); 
   
 export default app  
 
