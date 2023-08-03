@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./Coctail.css";
+import { useNavigate } from 'react-router-dom'
 
 function Coctail() {
     const { coctailId } = useParams();
     const [coctail, setCoctail] = useState({});
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -46,14 +50,36 @@ function Coctail() {
         else return "no"
     }
 
+    const navigateBack = () => {
+        // 👇️ navigate to /
+        navigate('/');
+    };
+
     return (
-        <div>
-            <h2>{coctail.strDrink}</h2>
-            <h3>is alcoholic? : {isAlcoholic()}</h3>
-            <img src={coctail.strDrinkThumb} alt={`${coctail.strDrink}`} />
-            <ul>{renderIngredients()}</ul>
-            <p>{coctail.strInstructions}</p>
-        </div>
+        <>
+            <header>
+                <img id="logoType" src="/Logotype.png" alt="Logo" />
+                <button id="backButton" onClick={navigateBack}>Back</button>
+            </header>
+            <main>
+                <div className="coctailBorder">
+                    <h2 id="coctailName">{coctail.strDrink}</h2>
+                    <h3 id="isAlcoholic">is alcoholic : {isAlcoholic()}</h3>
+                    <div className="contentContainer">
+                        <div className="imageContainer">
+                            <img src={coctail.strDrinkThumb} alt={`${coctail.strDrink}`} />
+                        </div>
+                        <div className="textContainer">
+                            <ul>{renderIngredients()}</ul>
+                            <p>{coctail.strInstructions}</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                Contact us: drinxtazy@xtazy.com
+            </footer>
+        </>
     );
 }
 
