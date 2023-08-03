@@ -64,10 +64,11 @@
     ul li {
         font-weight: 300;
         font-size: 3vh;
+        margin: 2vh 0;
     }
     
     p {
-        margin-top: 10px;
+        margin-top: 20vh;
         font-weight: 600;
         font-size: 2vh;
     }
