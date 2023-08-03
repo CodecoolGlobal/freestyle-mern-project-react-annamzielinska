@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../search/Search';
-import RandomDrink from '../RandomDrink/RandomDrink';
+import RandomDrink from '../RandomDrink/RandomDrink.js'
 import "./main.css"
 import { useNavigate } from 'react-router-dom'
 import logo from "./Logotype.png";
