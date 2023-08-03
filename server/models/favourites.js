@@ -3,8 +3,7 @@ const {Schema, model} = mongoose;
 
 const FavouriteSchema = new Schema({
     name: String,
-    isAlcoholic: Boolean,
-    ingridients: Array,
+    photoUrl: String,
     instructions: String,
 }, {timestamps: true});
 

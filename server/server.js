@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import UserRouter from './routes/login.js'
+import favRouter from './routes/favourites.js'
 const { MONGO_URL, PORT } = process.env;
 
 const corsPolicy = {
@@ -31,6 +32,7 @@ mongoose.connect(MONGO_URL)
    })
 
 app.use('/users', UserRouter)
+app.use('/fav', favRouter)
 
 
 // app.get("/users/register", async (req, res) => {
