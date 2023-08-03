@@ -49,7 +49,9 @@ export default function Main() {
           </div>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        <h5>Contact us: drinxtazy@xtazy.com</h5>
+      </footer>
     </>
   );
 }

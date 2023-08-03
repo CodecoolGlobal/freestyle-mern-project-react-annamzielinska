@@ -1,5 +1,6 @@
 .randomDrinks {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
+    position: relative;
+    top: -10em;
 }

@@ -26,8 +26,9 @@ function RandomDrink() {
         <div class="card" style={{ width: "18rem" }}>
           <img className="card-img-top" src={random.drinks[0].strDrinkThumb} alt={`${random.drinks[0].strDrink}`} />
           <div className="card-body">
-            <h5 class="card-title" style={{ overflow: "hidden", height: "2.5rem" }}>{random.drinks[0].strDrink}</h5>
-            <p class="card-text" style={{ overflow: "hidden", height: "6rem" }}>{random.drinks[0].strInstructions}</p>
+            <h5 class="card-title" style={{ height: "2.5rem" }}>{random.drinks[0].strDrink}</h5>
+            <h6 class="card-title" style={{ height: "2.5rem", fontSize: "12px" }}>{`for Ingredients search up the drink in searchbar`}</h6>
+            <p class="card-text" style={{ height: "5.5rem" }}>{random.drinks[0].strInstructions}</p>
           </div>
         </div>
       ) : (

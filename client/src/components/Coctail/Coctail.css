@@ -1,101 +1,169 @@
-    body {
-        font-family: 'Quicksand', sans-serif;
-        background-color: #FFFCE9;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
-    header {
-        background-color: #AE6FFF;
-        margin: 0px 0px;
-        align-items: center;
-    }
-    
-    #logoType {
-        margin: 2vh 4vw;
-        width: 20vh;
-    }
+body,
+html,
+main {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FFFCE9;
+    overflow: hidden;
+}
 
-    #backButton {
-        margin: 2vh 6vw;
-        font-size: calc(3px + 3vh);
-        border-radius: 1vh;
-        color: #FFFCE9;
-        background-color: #7236C0;
-        margin-left: 60vw;
-    }
+header {
+    background-color: #AE6FFF;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#logoType {
+    width: 100%;
+    max-width: 200px;
+}
+
+#backButton {
+    font-size: calc(3px + 2vh);
+    border-radius: 10px;
+    color: #FFFCE9;
+    background-color: #7236C0;
+    margin-left: auto;
+    border: none;
+    padding: 10px 20px;
+}
+
+main {
+    color: #FFFCE9;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.coctailBorder {
+    margin: 16vh 14vw;
+    text-align: center;
+    padding: 20px;
+    background-color: #699C27;
+    border-radius: 20px;
+}
+
+#coctailName {
+    font-size: calc(10px + 4vw);
+    margin-bottom: 10px;
+    color: #1C4D71;
+    font-weight: 700;
+}
+
+#isAlcoholic {
+    font-size: calc(6px + 2vw);
+    margin-bottom: 10px;
+    color: #1C4D71;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    font-weight: 300;
+    font-size: calc(6px + 1.2vw);
+    line-height: 3em;
+    margin: 10px 0;
+}
+
+p {
+    margin-top: 20vh;
+    font-weight: 600;
+    line-height: 1.2em;
+    font-size: calc(6px + 1.2vw);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #BA6EC7;
+    font-weight: 600;
+    color: #FFFCE9;
+}
+
+footer>h5 {
+    padding-top: 10px;
+    padding-left: 1.5em;
+}
+
+footer>p {
+    font-weight: 400;
+    position: relative;
+    top: -2.5px;
+    padding-left: 5px;
+}
+
+.contentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 5px;
+}
+
+.imageContainer img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.textContainer {
+    color: #1C4D71;
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+    overflow-wrap: normal;
+}
+
+.card-body>p {
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
 
     main {
-        color: #FFFCE9;
+        margin-top: 60px;
     }
 
     .coctailBorder {
-        margin: 10vh 10vw;
-        text-align: center;
-        padding: 30px;
-        background-color: #699C27;
-        border-radius: 20px;
-    }
-    
-    #coctailName {
-        font-size: calc(10px + 4vh);
-        margin-bottom: 10px;
-        color: #1C4D71;
-        font-weight: 700;
-    }
-    
-    #isAlcoholic {
-        font-size: calc(2px + 4vh);
-        margin-bottom: 10px;
-        color: #1C4D71;
-        font-weight: 300;
-    }
-    
-    img {
-        max-width: 100%;
-        height: auto;
-        margin: 10px 0;
-    }
-    
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 1vh 0;
-    }
-    
-    ul li {
-        font-weight: 300;
-        font-size: 3vh;
-        margin: 2vh 0;
-    }
-    
-    p {
-        margin-top: 20vh;
-        font-weight: 600;
-        font-size: 2vh;
+        margin: 5vh 2vw;
     }
 
-    footer {
-        padding: 2vh 2vw;
-        background-color: #BA6EC7;
-        font-weight: 600;
-        color: #FFFCE9;
+    #coctailName {
+        font-size: calc(10px + 3vw);
+    }
+
+    #isAlcoholic {
+        font-size: calc(6px + 1.2vw);
+    }
+
+    ul li {
+        font-size: calc(6px + 1.2vw);
+    }
+
+    p {
+        margin-top: 10vh;
+        font-size: calc(6px + 1.2vw);
     }
 
     .contentContainer {
-        display: flex;
-        align-items: center;
-        margin: 1vh 1vw;
+        margin: 5px 2px;
     }
-    
-    .imageContainer img {
-        flex: 1;
-        width: 30vw;
-        height: auto;
-    }
-    
-    .textContainer {
-        color: #1C4D71;
-        flex: 1;
-        padding-left: 20px;
-        width: 40vw;
-        height: auto;
-    }
+}

@@ -57,7 +57,7 @@ function Coctail() {
 
     return (
         <>
-            <header>
+            <header style={{ position: "fixed" }}>
                 <img id="logoType" src="/Logotype.png" alt="Logo" />
                 <button id="backButton" onClick={navigateBack}>Back</button>
             </header>
@@ -70,14 +70,14 @@ function Coctail() {
                             <img src={coctail.strDrinkThumb} alt={`${coctail.strDrink}`} />
                         </div>
                         <div className="textContainer">
-                            <ul>{renderIngredients()}</ul>
+                            <ul>{renderIngredients()}</ul><br></br>
                             <p>{coctail.strInstructions}</p>
                         </div>
                     </div>
                 </div>
             </main>
             <footer>
-                Contact us: drinxtazy@xtazy.com
+                <h5>Contact us: drinxtazy@xtazy.com</h5>
             </footer>
         </>
     );
