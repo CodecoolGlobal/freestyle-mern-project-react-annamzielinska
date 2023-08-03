@@ -33,7 +33,7 @@ export default function Main() {
           Welcome to Drin’xtazy
           </h1>
           <h2>
-            Blalalalalalbabalalala
+          your ultimate destination for all things drinks! We are delighted to have you on board as we embark on this exciting journey of mixing, searching, and discovering new and delicious beverages together.
           </h2>
         </div>
         </div>
