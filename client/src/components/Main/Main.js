@@ -26,8 +26,10 @@ export default function Main() {
       <main>
         <img src={logo} alt="Logo" />
         <div>
-          <button onClick={navigateRegister}>Register</button>
-          <button onClick={navigateLogin}>Login</button>
+          <div className="loginReg">
+            <button onClick={navigateRegister}>Register</button>
+            <button onClick={navigateLogin}>Login</button>
+          </div>
           <div>
             <h1>
               Welcome to Drin’xtazy

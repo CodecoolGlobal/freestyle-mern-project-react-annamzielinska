@@ -104,17 +104,17 @@ function Signup() {
                             name="password"
                             className="form-control rounded-0"
                             onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-                        <button type="submit" className="btn btn-success w-100 rounded-0">
-                            Register
-                        </button>
-                        </form>
-                        <p>Already Have an Account</p>
-                        <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-                            Login
-                        </Link>
-                
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-success w-100 rounded-0">
+                        Register
+                    </button>
+                </form>
+                <p style={{ fontSize: "14px", marginTop: "15px" }}>Already Have an Account</p>
+                <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+                    Login
+                </Link>
+
             </div>
         </div>
     )
