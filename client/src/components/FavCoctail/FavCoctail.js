@@ -29,8 +29,8 @@ function GetFavDrink() {
         <div className="card" key={drink._id} style={{ width: "18rem" }}>
           <img className="card-img-top" src={drink.photoUrl} alt={`${drink.name}`} />
           <div className="card-body">
-            <h5 class="card-title" style={{ overflow: "hidden", height: "2.5rem" }}>{drink.name}</h5>
-            <p class="card-text" style={{ overflow: "hidden", height: "6rem" }}>{drink.instruction}</p>
+            <h5 class="card-title">{drink.name}</h5>
+            <p class="card-text">{drink.instruction}</p>
           </div>
         </div>
       ))

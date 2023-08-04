@@ -1,22 +1,12 @@
 import React from 'react';
 import Search from '../search/Search';
-import RandomDrink from '../RandomDrink/RandomDrink.js'
+import RandomDrinks from '../RandomDrinks/RandomDrinks.js'
 import "./main.css"
 import { useNavigate } from 'react-router-dom'
 import logo from "./Logotype.png";
 
 export default function Main() {
   const navigate = useNavigate();
-
-  const navigateRegister = () => {
-    // 👇️ navigate to /
-    navigate('/signup');
-  };
-
-  const navigateLogin = () => {
-    // 👇️ navigate to /
-    navigate('/login');
-  };
 
   return (
     <>
@@ -26,8 +16,8 @@ export default function Main() {
       <main>
         <img src={logo} alt="Logo" />
         <div>
-          <button onClick={navigateRegister}>Register</button>
-          <button onClick={navigateLogin}>Login</button>
+          <button onClick={() => navigate('/signup')}>Register</button>
+          <button onClick={() => navigate('/login')}>Login</button>
           <div>
             <h1>
               Welcome to Drin’xtazy
@@ -38,15 +28,7 @@ export default function Main() {
           </div>
         </div>
         <div className="randomDrinks">
-          <div>
-            <RandomDrink />
-          </div>
-          <div>
-            <RandomDrink />
-          </div>
-          <div>
-            <RandomDrink />
-          </div>
+            <RandomDrinks length="3"/>
         </div>
       </main>
       <footer>

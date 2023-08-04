@@ -46,20 +46,14 @@ function Coctail() {
     };
 
     function isAlcoholic() {
-        if (coctail.strAlcoholic === "Alcoholic") return "yes"
-        else return "no"
+        return coctail.strAlcoholic === "Alcoholic" ? "yes" : "no";
     }
-
-    const navigateBack = () => {
-        // 👇️ navigate to /
-        navigate('/');
-    };
 
     return (
         <>
             <header style={{ position: "fixed" }}>
                 <img id="logoType" src="/Logotype.png" alt="Logo" />
-                <button id="backButton" onClick={navigateBack}>Back</button>
+                <button id="backButton" onClick={() => navigate('/')}>Back</button>
             </header>
             <main>
                 <div className="coctailBorder">

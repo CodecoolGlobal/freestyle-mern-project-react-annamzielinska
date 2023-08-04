@@ -1,0 +1,9 @@
+.card-title {
+    overflow: "hidden";
+    height: "2.5rem"
+}
+
+.card-text {
+    overflow: "hidden";
+    height: "6rem"
+}
