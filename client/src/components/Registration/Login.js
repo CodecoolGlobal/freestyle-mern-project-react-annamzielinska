@@ -52,7 +52,7 @@ function Login() {
                         Login
                     </button>
                 </form>
-                <p>Dont have an Account?</p>
+                <p style={{fontSize:"14px", marginTop:"15px"}}>Dont have an Account?</p>
                 <Link to="/signup" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
                     Register
                 </Link>

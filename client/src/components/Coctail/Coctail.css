@@ -42,7 +42,7 @@ main {
 }
 
 .coctailBorder {
-    margin: 16vh 14vw;
+    margin: 10vh 14vw;
     text-align: center;
     padding: 20px;
     background-color: #ABE364;
@@ -143,7 +143,7 @@ footer>p {
     }
 
     .coctailBorder {
-        margin: 5vh 2vw;
+        margin: 8vh 2vw;
     }
 
     #coctailName {
