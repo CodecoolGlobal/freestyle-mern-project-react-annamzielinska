@@ -12,3 +12,36 @@ li {
     max-width: 100%;
     max-height: 20px;
 }
+.searchContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .resultsContainer {
+    position: absolute;
+    background-color: #fff;
+    width: 33.33%; /* One-third of the width */
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  .drinkName {
+    font-size: 80%; /* Half-size font */
+    color: #000; /* Black font color */
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .drinkName:hover {
+    background-color: #f8f8f8; /* Hover background color */
+  }

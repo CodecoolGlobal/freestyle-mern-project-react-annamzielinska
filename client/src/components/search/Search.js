@@ -56,10 +56,9 @@ function Search() {
   };
 
   return (
-    <label>
+    <div className="searchContainer">
       <div className="container">
-        Find your drink by name:
-        <input type="text" onChange={(e) => fetchDataByName(e.target.value)} />
+        <input placeholder="Find Your Drink" type="text" onChange={(e) => fetchDataByName(e.target.value)} />
         <label>
           Find your drink by ingredient:
           <select onChange={(e) => fetchDrinkByIngredient(e.target.value)}>
@@ -71,11 +70,13 @@ function Search() {
             ))}
           </select>
         </label>
+      </div>
+      <div className="resultsContainer">
         <ul className={(coctails.drinks && coctails.drinks.length > 0) || selectedIngredient ? "whiteBackground" : "hidden"}>
           {coctails.drinks &&
             coctails.drinks.map((coctail) => (
               <a href={`/coctail/${coctail.idDrink}`} key={coctail.idDrink}>
-                <li>{coctail.strDrink}</li>
+                <li className="drinkName">{coctail.strDrink}</li>
               </a>
             ))}
         </ul>
@@ -83,13 +84,13 @@ function Search() {
           {ingredient.drinks &&
             ingredient.drinks.map((ingridients) => (
               <a href={`/coctail/${ingridients.idDrink}`} key={ingridients.idDrink}>
-                <li>{ingridients.strDrink}</li>
+                <li className="drinkName">{ingridients.strDrink}</li>
               </a>
             ))}
         </ul>
       </div>
-    </label>
+    </div>
   );
-}
+            }
 
-export default Search;
+export default Search

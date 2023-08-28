@@ -1,3 +1,14 @@
+.header {
+    background-color: #AE6FFF;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
 .randomDrinks {
     display: flex;
     justify-content: center;
