@@ -3,6 +3,7 @@ import User from "../models/userModel.js";
 
 const userRouter = express.Router();
 
+
 userRouter
 .route('/login')
 .post(async (req, res) => {
