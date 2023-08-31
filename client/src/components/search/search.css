@@ -24,12 +24,12 @@ li {
   .resultsContainer {
     position: absolute;
     background-color: #fff;
-    width: 33.33%; /* One-third of the width */
+    width: 15%; /* One-third of the width */
     max-height: 80vh;
     overflow-y: auto;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     top: 100%;
-    left: 50%;
+    left: 37%;
     transform: translateX(-50%);
     z-index: 1000;
   }

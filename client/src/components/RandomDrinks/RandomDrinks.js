@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import "./randomDrinks.css";
 
-function RandomDrinks({length}) {
+function RandomDrinks({ length }) {
     const [drinks, setDrinks] = useState([]);
+    
     function isDrinkInList(drinks, id) {
-        return drinks.find(drink => drink.idDrink == id);
+        return drinks.find(drink => drink.idDrink === id);
     }
 
     const fetchRandom = async () => {
@@ -14,7 +16,6 @@ function RandomDrinks({length}) {
             }
             const jsonData = await response.json();
             return jsonData.drinks[0];
-
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -37,18 +38,19 @@ function RandomDrinks({length}) {
     return (
         <>
             {drinks.map(drink => (
-                <div key={drink.idDrink} className="card" style={{ width: "18rem" }}>
+                <div key={drink.idDrink} className="card">
                     <img className="card-img-top" src={drink.strDrinkThumb} alt={drink.strDrink} />
                     <div className="card-body">
-                        <h5 className="card-title" style={{ height: "2.5rem" }}>{drink.strDrink}</h5>
-                        <h6 className="card-title" style={{ height: "2.5rem", fontSize: "12px" }}>
-                            {"for Ingredients search up the drink in searchbar"}
+                        <h5 className="card-title">{drink.strDrink}</h5>
+                        <h6 className="card-subtitle">
+                            {"For ingredients search up the drink in the search bar"}
                         </h6>
-                        <p className="card-text" style={{ height: "5.5rem" }}>{drink.strInstructions}</p>
+                        <p className="card-text">{drink.strInstructions}</p>
                     </div>
                 </div>
             ))}
         </>
     );
 }
-export default RandomDrinks
+
+export default RandomDrinks;
