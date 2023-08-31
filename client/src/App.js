@@ -43,10 +43,10 @@ export default function App() {
         <div className="randomDrinks">
           <RandomDrinks length="3" />
         </div>
+      </main>
         <footer>
           <h5>Contact us: drinxtazy@xtazy.com</h5>
         </footer>
-      </main>
     </>
   );
 }
