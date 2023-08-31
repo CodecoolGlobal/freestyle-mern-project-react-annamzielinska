@@ -5,10 +5,12 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ABE364;
 }
 
 .card-img-top {
-    width: 100%;
+    width: 80%;
+    margin: 10%;
     height: auto;
 }
 
@@ -20,23 +22,23 @@
     height: 2.5rem;
     margin: 0;
     font-size: 1.25rem;
-    color:#080808
+    color:#1C4D71
 }
 
 .card-subtitle {
     height: 2.5rem;
     margin: 0;
     font-size: 0.75rem;
-    color: #666;
+    color: #1C4D71;
 }
 
 .card-text {
     height: 5.5rem;
     margin: 0;
-    color:#666
+    color:#1C4D71
 }
 .addFavButton{
-    background-color: #7236C0;
+    background-color: #699C27;
     color: white;
     border: none;
     border-radius: 5px;

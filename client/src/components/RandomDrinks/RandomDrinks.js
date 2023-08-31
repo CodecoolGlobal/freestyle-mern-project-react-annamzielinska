@@ -60,13 +60,13 @@ function RandomDrinks({ length }) {
                 <div key={drink.idDrink} className="card">
                     <img className="card-img-top" src={drink.strDrinkThumb} alt={drink.strDrink} />
                     <div className="card-body">
-                        <button className="addFavButton" onClick={() => 
-                            handleAddToFavorites(drink.idDrink, drink.strDrinkThumb, drink.strDrink, drink.strInstructions)}>Add to favorites</button>
                         <h5 className="card-title">{drink.strDrink}</h5>
                         <h6 className="card-subtitle">
                             {"For ingredients search up the drink in the search bar"}
                         </h6>
                         <p className="card-text">{drink.strInstructions}</p>
+                        <button className="addFavButton" onClick={() => 
+                            handleAddToFavorites(drink.idDrink, drink.strDrinkThumb, drink.strDrink, drink.strInstructions)}>Add to favorites</button>
                     </div>
                 </div>
             ))}

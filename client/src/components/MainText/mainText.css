@@ -1,32 +1,32 @@
-.card {
-    width: 18rem;
-    margin: 10px;
-    border: 1px solid #ccc;
+.cardText {
+    width: 50%;
+    margin: 2% 20%;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
-.card-body {
+.card-bodyText {
     padding: 1rem;
 }
 
-.card-title {
+.card-titleText {
     height: 2.5rem;
-    margin: 0;
-    font-size: 1.25rem;
-    color:#080808
+    margin: 4px;
+    font-size: 2rem;
+    color:#1C4D71
 }
 
-.card-subtitle {
+.card-subtitleText {
     height: 2.5rem;
-    margin: 0;
-    font-size: 0.75rem;
-    color: #666;
+    margin: 4px;
+    font-size: 1rem;
+    color: #1C4D71;
 }
 
 .card-text {
     height: 5.5rem;
     margin: 0;
-    color:#666
+    color:#1C4D71
 }
