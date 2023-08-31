@@ -1,64 +1,35 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react"
 
-function Login() {
+const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const user = { username, password }
-        // todo fetch above data to backend
-        fetch("http://localhost:8000/users/login", {
-            method: "POST", body: JSON.stringify(user),
-        }).then(res => {
-            console.log(res.status)
-        })
-    };
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        console.log(username, password)
+    }
 
     return (
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-            <div className="bg-white p-3 rounded w-25">
-                <h2>Login</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="email">
-                            <strong>Username</strong>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Enter Name"
-                            autoComplete="off"
-                            name="email"
-                            className="form-control rounded-0"
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="email">
-                            <strong>Password</strong>
-                        </label>
-                        <input
-                            type="password"
-                            placeholder="Enter Surname"
-                            autoComplete="off"
-                            name="email"
-                            className="form-control rounded-0"
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-success w-100 rounded-0">
-                        Login
-                    </button>
-                </form>
-                <p style={{fontSize:"14px", marginTop:"15px"}}>Dont have an Account?</p>
-                <Link to="/signup" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-                    Register
-                </Link>
-            </div>
-        </div>
-    );
+        <form className="login" onSubmit={handleSubmit}>
+            <h3>Log In</h3>
+
+            <label>Username:</label>
+            <input
+                type="email"
+                onChange={(e) => setUsername(e.target.value)}
+                value={username}
+            />
+            <br />
+            <label>Password:</label>
+            <input
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+            />
+            <br />
+            <button>Log in</button>
+        </form>
+    )
 }
 
-export default Login;
+export default Login

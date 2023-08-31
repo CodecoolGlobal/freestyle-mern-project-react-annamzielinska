@@ -9,25 +9,19 @@
     width: 100%;
     z-index: 999;
 }
+
 .randomDrinks {
     display: flex;
     justify-content: center;
     position: relative;
     top: -10em;
-    gap: 50px;
 }
 
-.loginReg {
-    position: fixed;
-    top: 0px;
-    margin: 12px 15px 5px;
-    right: 0px;
-    z-index: 999;
-}
-
-.loginReg>button{
-    border: none;
-}
-.loginReg>button:first-child {
-    margin-right: 15px;
+form.signup,
+form.login {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
 }

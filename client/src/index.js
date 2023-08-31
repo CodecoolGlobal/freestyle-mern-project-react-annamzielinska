@@ -1,42 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import "./index.css";
-import Main from './components/Main/Main';
+import ReactDOM from 'react-dom';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
 import Coctail from './components/Coctail/Coctail';
 import Signup from './components/Registration/Signup';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Registration/Login';
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Main/>,
-  },
-  {
-    path: "coctail/:coctailId",
-    element: <Coctail/>,
-  },
-  {
-    path: "/signup",
-    element: <Signup/>,
-  },
-  {
-    path: "/login",
-    element: <Login/>,
-  }
-]);
+import { AuthContextProvider } from './context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthContextProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/coctail/:coctailId" element={<Coctail />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </AuthContextProvider>
   </React.StrictMode>
 );
 
-
-reportWebVitals();
