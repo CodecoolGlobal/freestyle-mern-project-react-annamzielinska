@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./randomDrinks.css";
+import { useContext } from 'react'
+import { AuthContext } from "../../context/AuthContext";
 
 function RandomDrinks({ length }) {
     const [drinks, setDrinks] = useState([]);
-    
+    const { user } = useContext(AuthContext);
+
     function isDrinkInList(drinks, id) {
         return drinks.find(drink => drink.idDrink === id);
     }
@@ -22,22 +25,22 @@ function RandomDrinks({ length }) {
     };
 
     const handleAddToFavorites = (id, drinkPhoto, drinkName, drinkInstr) => {
-        const data = {drinkId: id, name: drinkName, photoUrl: drinkPhoto, instructions: drinkInstr};
-            fetch(`http://localhost:8000/fav`, {
+        const data = { drinkId: id, name: drinkName, photoUrl: drinkPhoto, instructions: drinkInstr };
+        fetch(`http://localhost:8000/fav`, {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
-          })
+        })
             .then((response) => response.text())
             .then((result) => {
             })
             .catch((error) => {
-              console.error("Error:", error);
+                console.error("Error:", error);
             });
-        }
-    
+    }
+
 
 
     useEffect(() => {
@@ -58,15 +61,17 @@ function RandomDrinks({ length }) {
         <>
             {drinks.map(drink => (
                 <div key={drink.idDrink} className="card">
-                    <img className="card-img-top" src={drink.strDrinkThumb} alt={drink.strDrink} />
+                    <img className="card-img-top" src={drink.strDrinkThumb} alt={drink.strDrink}/>
                     <div className="card-body">
                         <h5 className="card-title">{drink.strDrink}</h5>
                         <h6 className="card-subtitle">
                             {"For ingredients search up the drink in the search bar"}
                         </h6>
                         <p className="card-text">{drink.strInstructions}</p>
-                        <button className="addFavButton" onClick={() => 
-                            handleAddToFavorites(drink.idDrink, drink.strDrinkThumb, drink.strDrink, drink.strInstructions)}>Add to favorites</button>
+                        {user && (
+                            <button className="addFavButton" onClick={() =>
+                                handleAddToFavorites(drink.idDrink, drink.strDrinkThumb, drink.strDrink, drink.strInstructions)}>Add to favorites</button>
+                        )}
                     </div>
                 </div>
             ))}
