@@ -1,9 +1,52 @@
+.card {
+    max-width: calc(33.33% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ABE364;
+}
+
+.card-img-top {
+    width: 80%;
+    margin: 10%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
 .card-title {
-    overflow: "hidden";
-    height: "2.5rem"
+    height: 2.5rem;
+    margin: 0;
+    font-size: 1.25rem;
+    color:#1C4D71
+}
+
+.card-subtitle {
+    height: 2.5rem;
+    margin: 0;
+    font-size: 0.75rem;
+    color: #1C4D71;
 }
 
 .card-text {
-    overflow: "hidden";
-    height: "6rem"
+    height: 5.5rem;
+    margin: 0;
+    color:#1C4D71
+}
+.addFavButton{
+    background-color: #699C27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 25%;
+    transition: background-color 0.3s;
+}
+.addFavButton:hover {
+    background-color: #8F54DA;
 }
