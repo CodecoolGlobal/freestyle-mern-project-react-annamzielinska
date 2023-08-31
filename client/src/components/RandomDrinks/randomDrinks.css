@@ -35,3 +35,16 @@
     margin: 0;
     color:#666
 }
+.addFavButton{
+    background-color: #7236C0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 25%;
+    transition: background-color 0.3s;
+}
+.addFavButton:hover {
+    background-color: #8F54DA;
+}

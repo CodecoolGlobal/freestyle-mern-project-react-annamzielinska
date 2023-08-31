@@ -15,9 +15,9 @@ favRouter
     }
   })
   .post(async (req, res) => {
-    const { name, photoUrl, instructions } = req.body;
+    const { drinkId, name, photoUrl, instructions } = req.body;
     try {
-      const favourite = await Favourite.create({ name, photoUrl, instructions });
+      const favourite = await Favourite.create({drinkId, name, photoUrl, instructions });
       res.status(200).json(favourite);
     } catch (error) {
       res.status(400).json({ error: error.message });
