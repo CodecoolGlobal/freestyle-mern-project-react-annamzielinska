@@ -61,9 +61,9 @@ function RandomDrinks({ length }) {
         <>
             {drinks.map(drink => (
                 <div key={drink.idDrink} className="card">
-                    <img className="card-img-top" src={drink.strDrinkThumb} alt={drink.strDrink}/>
+                    <img className="card-img-top" src={drink.strDrinkThumb} alt={drink.strDrink} onClick={() => (window.location.href = `/coctail/${drink.idDrink}`)}></img>
                     <div className="card-body">
-                        <h5 className="card-title">{drink.strDrink}</h5>
+                        <h5 className="card-title" onClick={() => (window.location.href = `/coctail/${drink.idDrink}`)}>{drink.strDrink}</h5>
                         <h6 className="card-subtitle">
                             {"For ingredients search up the drink in the search bar"}
                         </h6>

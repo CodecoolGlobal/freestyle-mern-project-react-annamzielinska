@@ -1,8 +1,8 @@
-import requireAuth from '../middleware/requireAuth.js';
+// import requireAuth from '../middleware/requireAuth.js';
 const express = require('express');
 const Favourite = require('../models/favourites.js');
 
-// const favRouter = express.Router();
+const favRouter = express.Router();
 
 //require auth for all favourites routes
 // favRouter.use(requireAuth)

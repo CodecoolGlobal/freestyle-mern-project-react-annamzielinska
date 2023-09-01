@@ -25,7 +25,8 @@ export default function App() {
         <Search />
         {user && (
           <div className='logoutReg'>
-            <span>{user.username}</span>
+            <span>{user.username}</span><br/>
+            <button id="favButton" onClick={() => navigate('/fav')} style={{margin:"2px"}}>Favourites</button>
             <button className="logoutButton" onClick={handleLogoutClick}>Logout</button>
           </div>
         )}
