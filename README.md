@@ -24,9 +24,9 @@ npm start
 
 ## Technologies Used
 
-*Frontend: The frontend of this web application is built using HTML, CSS, and JavaScript, with React.js as the primary JavaScript framework.
-Backend: The backend is powered by Node.js and Express.js, providing RESTful APIs for fetching drink data and managing user authentication.
-Database: User data and favorite drinks are stored in a MongoDB database, which is non-relational database system supported by Node.js.*
+- **Frontend**: The frontend of this web application is built using HTML, CSS, and JavaScript, with React.js as the primary JavaScript framework.
+- **Backend**: The backend is powered by Node.js and Express.js, providing RESTful APIs for fetching drink data and managing user authentication.
+- **Database**: User data and favorite drinks are stored in a MongoDB database, which is a non-relational database system supported by Node.js.
 
 ## API Documentation
 
