@@ -1,66 +1,37 @@
 # MERN Project - README.md
 
-## Project Title
+## Drin’xtazy - Drink Search Web App
 
-*Provide a concise and descriptive title for your MERN (MongoDB, Express, React, Node.js) project.*
-
-## Project Overview
-
-*Summarize the purpose and goals of your MERN project.*
-
-## Table of Contents
-
-*Include a table of contents to help readers navigate your README.*
-
-1. [Project Title](#project-title)
-2. [Project Overview](#project-overview)
-3. [Table of Contents](#table-of-contents)
-4. [Installation](#installation)
-5. [Technologies Used](#technologies-used)
-6. [Features](#features)
-7. [Usage](#usage)
-8. [API Documentation](#api-documentation)
-9. [Screenshots](#screenshots)
-10. [Contributing](#contributing)
-11. [License](#license)
-12. [Contact](#contact)
-
-## Installation
-
-*Explain the steps required to set up your project locally. Include all the dependencies that need to be installed, and any additional setup instructions.*
-
-## Technologies Used
-
-*List all the technologies and tools you utilized in your project, such as programming languages, libraries, frameworks, and databases.*
+Welcome to the Drink Search Web App! This web application allows users to search for drinks by name or ingredient. Users can explore a variety of drinks, view their ingredients and recipes, and even add their favorite drinks to their profile when logged in.
 
 ## Features
 
-*Enumerate the key features of your MERN project.*
+- **Search Drinks**: Users can search for drinks by name or ingredient, making it easy to find the perfect drink for any occasion.
+- **Random Drink Suggestions**: On the main page, users are presented with three random drink suggestions that they can choose to explore further.
+- **View Drink Details**: Users can view detailed information about each drink, including its ingredients and recipe.
+- **Favorite Drinks**: Registered users have the ability to add selected drinks to their favorites list for easy access later.
 
-## Usage
+## Getting Started
 
-*Provide instructions on how to use your application or website. Include any necessary details about how users can interact with the project.*
+To get started with the Drink Search Web App, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory and install the necessary dependencies by running:
+npm install
+3. Start the development server by running:
+npm start
+4. Open your web browser and navigate to http://localhost:3000 to access the Drink Search Web App.*
+
+## Technologies Used
+
+*Frontend: The frontend of this web application is built using HTML, CSS, and JavaScript, with React.js as the primary JavaScript framework.
+Backend: The backend is powered by Node.js and Express.js, providing RESTful APIs for fetching drink data and managing user authentication.
+Database: User data and favorite drinks are stored in a MongoDB database, which is non-relational database system supported by Node.js.*
 
 ## API Documentation
 
-*If your project includes a backend API, provide documentation for its endpoints and how to consume it.*
-
-## Screenshots
-
-*Add relevant screenshots or gifs showcasing your application's UI or functionality.*
-
-## Contributing
-
-*Include guidelines on how other developers can contribute to your project. Mention the preferred way to submit pull requests and the code styling conventions.*
-
-## License
-
-*Determine the license for your project and include the text of the license or a link to the license file.*
+- **API Endpoint**: [The Cocktail DB API](https://www.thecocktaildb.com/api.php)
 
 ## Contact
 
-*Provide contact information so that other developers or users can reach out to you in case of questions or inquiries.*
-
----
-
-*Replace the placeholders with relevant information in each section of the README.md. Make sure to keep it concise, clear, and organized to help users and contributors understand your MERN project better.*
+If you have any questions or suggestions about the Drink Search Web App, feel free to contact us at margeritamohito@gmail.com.
