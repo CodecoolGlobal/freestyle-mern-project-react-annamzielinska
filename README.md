@@ -1,4 +1,4 @@
-# MERN Project - README.md
+# MERN Project
 
 ## Drin’xtazy - Drink Search Web App
 
